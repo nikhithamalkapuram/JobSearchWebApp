@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jobseeker</title>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1>Jobseeker page with signup form </h1>
+    <div class = "card-wrapper">
+        <div class="card">
+        <h1 class = "center">Create an account</h1>
+        <Form name="jobseekersignup_form" method='post'>
+            <label for="name">Name</label>
+            <input type="text" name ="jobseekername" id = "jobseekername" class ="field" required>
+    
+            <label for="password">Password</label>
+            <input type="password" name ="jobseekerpassword" id = "jobseekerpassword" class ="field" required>
+    
+            <label for="phonenumber">Phonenumber</label>
+            <input type="text" name ="jobseekerphonenumber" id= "jobseekerpphonenumber" class ="field" required>
+    
+            <p class="error error--hidden"></p>
+            
+            <input type = "submit"  id ="submit" value="Sign Up" class="btn">
+        </Form>
+    </div>
+    </div>
+    <a class='text' href="{{ url_for('jobseekerlogin') }}">Already a user?Login</a>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/script2.js"></script>
+</body>
+
+</html>

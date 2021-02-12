@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search by job category</title>
+</head>
+<body>
+    <form action="/searchjobcat/cat" method="get" autocomplete="on">
+        <label for="jobcategory">Job category:</label>
+                <select id="jobcategory" name="jobcategory" required>
+                    <option value="beautician">beautician</option>
+                    <option value="builder">builder</option>
+                    <option value="carpentry">carpentry</option>
+                    <option value="cook">cook</option>
+                    <option value="delivery">delivery</option>
+                    <option value="driver">driver</option>
+                    <option value="electrician">electrician</option>
+                    <option value="farming">farming</option>
+                    <option value="housekeeper">housekeeper</option>
+                    <option value="manufacturing">manufacturing</option>
+                    <option value="mechanic">mechanic</option>
+                    <option value="mining">mining</option>
+                    <option value="painter">painter</option>
+                    <option value="photographer">photographer</option>
+                    <option value="plumber">plumber</option>
+                    <option value="Tailoring">Tailoring</option>
+                    <option value="waiter">waiter</option>
+                </select>
+        <td><button type="submit">Search</button></td>
+        <button type="Reset" value="Reset">Reset</button>
+    
+    </form>
+    {%for job in catjobs%} 
+    <h1>{{job.jobcategory}}</h1>
+    <li>Location:{{job.joblocation}} </li>
+    <li>Jobtype:{{job.jobtype}}</li>
+    <li>postedon:{{job.posted_on}}</li>
+    {%endfor%} 
+</body>
+</html>

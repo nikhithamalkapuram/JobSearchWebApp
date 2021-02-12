@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post jobs</title>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class = "card-wrapper">
+        <div class="card">
+        <h1 class = "center">Create an job</h1>
+        <Form name="jobpost_form"  action="/postjobs/jobpost" method='post'>
+            <label for="jobcategory">Job category:</label>
+                <select id="jobcategory" name="jobcategory" required>
+                    <option value="beautician">beautician</option>
+                    <option value="builder">builder</option>
+                    <option value="carpentry">carpentry</option>
+                    <option value="cook">cook</option>
+                    <option value="delivery">delivery</option>
+                    <option value="driver">driver</option>
+                    <option value="electrician">electrician</option>
+                    <option value="farming">farming</option>
+                    <option value="housekeeper">housekeeper</option>
+                    <option value="manufacturing">manufacturing</option>
+                    <option value="mechanic">mechanic</option>
+                    <option value="mining">mining</option>
+                    <option value="painter">painter</option>
+                    <option value="photographer">photographer</option>
+                    <option value="plumber">plumber</option>
+                    <option value="Tailoring">Tailoring</option>
+                    <option value="waiter">waiter</option>
+                    
+                </select>
+
+                <label for="joblocation">Job location:</label>
+                <select id="joblocation" name="joblocation" required>
+                    <option value="banglore">banglore</option>
+                    <option value="chennai">chennai</option>
+                    <option value="delhi">delhi</option>
+                    <option value="hyderabad">hyderabad</option>
+                    <option value="kolkata">kolkata</option>
+                    <option value="pune">pune</option>
+                    
+                </select>
+
+                <label for="jobtype">Job type:</label>
+                <select id="jobtype" name="jobtype">
+                    <option value="work from home">work from home</option>
+                    <option value="internship">internship</option>
+                    <option value="part time">part time</option>
+                    <option value="full time">full time</option>
+                    <option value="government jobs">government jobs</option>
+                    <option value="private jobs">private jobs</option>
+                    
+                </select>
+    
+            <label for="count">Count of jobs</label>
+            <input type="text" name ="jobcount" id= "jobcount" class ="field" required>
+    
+            <p class="error error--hidden"></p>
+            
+            <input type = "submit"  id ="submit" value="Post" class="btn">
+        </Form>
+    </div>
+    </div>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/scripts.js"></script>
+    
+</body>
+</html>

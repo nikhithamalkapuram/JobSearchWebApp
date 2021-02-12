@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emp</title>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    
+    <div class = "card-wrapper">
+        <div class="card">
+            <h1 class="center">Employer page</h1>
+        <h1 class = "center">Create an account</h1>
+        <Form name="empsignup_form" >
+            <label for="name">Name</label>
+            <input type="text" name ="empname" id = "empname" class ="field" required>
+    
+            <label for="password">Password</label>
+            <input type="password" name ="emppassword" id = "emppassword" class ="field" required>
+    
+            <label for="phonenumber">Phonenumber</label>
+            <input type="text" name ="empphonenumber" id= "empphonenumber" class ="field" required>
+
+            <label for="email">email</label>
+            <input type="email" name ="empemail" id= "empemail" class ="field" required>
+            
+            
+            <p class="error error--hidden"></p>
+            
+            <input type = "submit"  id ="submit" value="Sign Up" class="btn">
+        </Form>
+        <a class='text' href="{{ url_for('emplogin') }}">Already a user?Login</a>
+    </div>
+    </div>
+    
+    <script src="/static/js/jquery.js"></script>
+<script src="/static/js/scripts.js"></script>
+</body>
+
+</html>

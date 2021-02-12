@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search by job location</title>
+</head>
+<body>
+    <form action="/searchjobloc/loc" method="get" autocomplete="on">
+        <label for="joblocation">Job location:</label>
+        <label for="joblocation">Job type:</label>
+        <select id="joblocation" name="joblocation" required>
+            <option value="banglore">banglore</option>
+            <option value="chennai">chennai</option>
+            <option value="delhi">delhi</option>
+            <option value="hyderabad">hyderabad</option>
+            <option value="kolkata">kolkata</option>
+            <option value="pune">pune</option>
+            
+        </select>
+        <td><button type="submit">Search</button></td>
+        <button type="Reset" value="Reset">Reset</button>
+    
+    </form>
+    {%for job in locjobs%} 
+    <h1>{{job.jobcategory}}</h1>
+    <li>Location:{{job.joblocation}} </li>
+    <li>Jobtype:{{job.jobtype}}</li>
+    <li>postedon:{{job.posted_on}}</li>
+    {%endfor%} 
+</body>
+</html>
